@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pet Memory Waitlist</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', Arial, sans-serif;
+      background: #fcf7ef;
+      color: #222;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+    .header-img {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      max-width: 100vw;
+      height: auto;
+      z-index: 10;
+      pointer-events: none;
+      user-select: none;
+    }
+    .footer-img {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100vw;
+      max-width: 100vw;
+      height: auto;
+      z-index: 10;
+      pointer-events: none;
+      user-select: none;
+    }
+    .center-content {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 20;
+      /* padding: 32px 16px 32px 16px; */
+    }
+    .title {
+      font-size: 1.9rem;
+      font-weight: 700;
+      text-align: center;
+      margin: 0 0 12px 0;
+      line-height: 1.2;
+    }
+    .subtitle {
+      color: #6d6d6d;
+      font-size: 0.8rem;
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    .waitlist-text {
+      font-size: 1.2rem;
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: 600;
+      color: #4a3b2c;
+    }
+    .form {
+      width: 100%;
+      max-width: 370px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .input-wrapper {
+      display: flex;
+      align-items: center;
+      background: #f3ede5;
+      border-radius: 16px;
+      padding: 0 16px;
+      /* border: 1.5px solid #e7d7c7; */
+      height: 54px;
+    }
+    .input-icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+    .input {
+      border: none;
+      outline: none;
+      background: transparent;
+      font-size: 1.1rem;
+      flex: 1;
+      color: #6d6d6d;
+    }
+    .input::placeholder {
+      color: #b9a89a;
+      font-size: 1.1rem;
+    }
+    .button {
+      padding: 16px 0;
+      background: #f97e4b;
+      color: #fff;
+      font-size: 1.25rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 16px;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 4px;
+    }
+    .button:hover {
+      background: #e96a36;
+    }
+    @media (max-width: 600px) {
+      .center-content { padding: 0 24px 0 24px; }
+    }
+  </style>
+  <script src="https://getlaunchlist.com/js/widget-diy.js" defer></script>
+</head>
+<body>
+  <!-- 顶部装饰图片 -->
+  <img class="header-img" src="./patpet_header.jpeg" alt="header decoration">
+  <!-- 居中内容 -->
+  <div class="center-content">
+    <div class="title">Create New Memories with The Pets You Loved</div>
+    <div class="subtitle">Even after they’ve crossed the Rainbow Bridge</div>
+    <div class="waitlist-text">Join our waitlist for early access!</div>
+    <form class="form launchlist-form" action="https://getlaunchlist.com/s/OHpFjP" method="POST">
+      <div class="input-wrapper">
+        <img class="input-icon" src="./patpet_mail.svg" alt="mail icon">
+        <input class="input" type="email" name="email" placeholder="Enter your email address" required />
+      </div>
+      <button class="button" type="submit">Join Waitlist</button>
+    </form>
+  </div>
+  <!-- 底部装饰图片 -->
+  <img class="footer-img" src="./patpet_footer.png" alt="footer decoration">
+</body>
+</html>

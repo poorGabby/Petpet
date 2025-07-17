@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Running Duel Waitlist</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', Arial, sans-serif;
+      background: #fff;
+      color: #111;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      padding: 24px 16px 0 16px;
+    }
+
+    .title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      text-align: center;
+      margin: 32px 0 12px 0;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      color: #888;
+      font-size: 1.1rem;
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .illustration {
+      width: 80%;
+      max-width: 320px;
+      margin: 0 auto 32px auto;
+      display: block;
+    }
+
+    .waitlist-text {
+      font-size: 1.2rem;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form {
+      width: 100%;
+      max-width: 350px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .input {
+      padding: 14px 16px;
+      border: 1px solid #ddd;
+      border-radius: 16px;
+      font-size: 1rem;
+      outline: none;
+      transition: border 0.2s;
+    }
+
+    .input:focus {
+      border: 1.5px solid #4CAF50;
+    }
+
+    .button {
+      padding: 14px 0;
+      background: #4CAF50;
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 16px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .button:hover {
+      background: #43a047;
+    }
+
+    .footer {
+      text-align: center;
+      color: #888;
+      font-size: 1rem;
+      padding: 18px 0 8px 0;
+      border-top: 1px solid #eee;
+      background: #fafafa;
+    }
+
+    .custom-form {
+      width: 100%;
+      max-width: 350px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+      margin: 0 auto 32px auto;
+    }
+
+    .custom-input {
+      width: 100%;
+      height: 48px;
+      border: 2px solid #ccc;
+      border-radius: 20px;
+      padding: 0 18px;
+      font-size: 1.15rem;
+      color: #222;
+      background: #fff;
+      box-sizing: border-box;
+      outline: none;
+      transition: border 0.2s;
+    }
+
+    .custom-input::placeholder {
+      color: #aaa;
+      font-size: 1.1rem;
+    }
+
+    .custom-input:focus {
+      border: 2px solid #22cc66;
+    }
+
+    .custom-button {
+      width: 100%;
+      height: 48px;
+      border: none;
+      border-radius: 20px;
+      background: #22cc66;
+      color: #111;
+      font-size: 1.2rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .custom-button:hover {
+      background: #1dbf5e;
+    }
+  </style>
+  <script src="https://getlaunchlist.com/js/widget.js" defer></script>
+  <script src="https://getlaunchlist.com/js/widget-diy.js" defer></script>
+
+  <script type="text/javascript">
+    !function () { "use strict"; !function (e, t) { var r = e.amplitude || { _q: [], _iq: {} }; if (r.invoked) e.console && console.error && console.error("Amplitude snippet has been loaded."); else { var n = function (e, t) { e.prototype[t] = function () { return this._q.push({ name: t, args: Array.prototype.slice.call(arguments, 0) }), this } }, s = function (e, t, r) { return function (n) { e._q.push({ name: t, args: Array.prototype.slice.call(r, 0), resolve: n }) } }, o = function (e, t, r) { e[t] = function () { if (r) return { promise: new Promise(s(e, t, Array.prototype.slice.call(arguments))) }; !function (e, t, r) { e._q.push({ name: t, args: Array.prototype.slice.call(r, 0) }) }(e, t, Array.prototype.slice.call(arguments)) } }, i = function (e) { for (var t = 0; t < g.length; t++)o(e, g[t], !1); for (var r = 0; r < m.length; r++)o(e, m[r], !0) }; r.invoked = !0; var c = t.createElement("script"); c.type = "text/javascript", c.integrity = "sha384-f0NwdVgBmzYJbj6FuFZ3mRjg1mp48oTMkoAtDqn7eWzdpbA+0NphznbRWuuCr0pf", c.crossOrigin = "anonymous", c.async = !0, c.src = "https://cdn.amplitude.com/libs/analytics-browser-2.19.0-min.js.gz", c.onload = function () { e.amplitude.runQueuedFunctions || console.log("[Amplitude] Error: could not load SDK") }; var a = t.getElementsByTagName("script")[0]; a.parentNode.insertBefore(c, a); for (var u = function () { return this._q = [], this }, p = ["add", "append", "clearAll", "prepend", "set", "setOnce", "unset", "preInsert", "postInsert", "remove", "getUserProperties"], l = 0; l < p.length; l++)n(u, p[l]); r.Identify = u; for (var d = function () { return this._q = [], this }, f = ["getEventProperties", "setProductId", "setQuantity", "setPrice", "setRevenue", "setRevenueType", "setReceipt", "setReceiptSig", "setCurrency", "setEventProperties"], v = 0; v < f.length; v++)n(d, f[v]); r.Revenue = d; var g = ["getDeviceId", "setDeviceId", "getSessionId", "setSessionId", "getUserId", "setUserId", "setOptOut", "setTransport", "reset", "extendSession"], m = ["init", "add", "remove", "track", "logEvent", "identify", "groupIdentify", "setGroup", "revenue", "flush"]; i(r), r.createInstance = function (e) { return r._iq[e] = { _q: [] }, i(r._iq[e]), r._iq[e] }, e.amplitude = r } }(window, document) }();
+
+    amplitude.init("b4e6a105055b43e055219c153b4c979d", {
+      defaultTracking: true,
+    });
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="title">Challenge Your Friends to a Running Duel!</div>
+    <div class="subtitle">Place a bet, track your run, and win real cash.</div>
+    <!-- 插画可替换为SVG或图片，这里用占位图 -->
+    <img class="illustration" src="./hero.jpeg" alt="Running Duel Illustration">
+    <div class="waitlist-text">Join our waitlist to get early access.</div>
+    <form class="launchlist-form custom-form" action="https://getlaunchlist.com/s/XslvNt" method="POST">
+      <input class="custom-input" type="email" name="email" placeholder="Enter your email" required />
+      <button class="custom-button" type="submit">Sign Up</button>
+    </form>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const emailInput = document.querySelector('input[name="email"]');
+
+      if (emailInput) {
+        emailInput.addEventListener('focus', function () {
+          amplitude.track('Email Input Focused', {
+            timestamp: Date.now(),
+            page_url: window.location.href,
+            page_title: document.title,
+            input_type: 'email',
+            form_type: 'waitlist'
+          });
+        });
+      }
+
+      amplitude.track('Waitlist Page Viewed', {
+        timestamp: Date.now(),
+        page_url: window.location.href,
+        page_title: document.title,
+        user_agent: navigator.userAgent
+      });
+    });
+  </script>
+</body>
+
+</html>
